@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue page</title>
+  <style>
+    #app {
+      display: inline-block;
+      padding: 10px;
+      font-size: x-large;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+
+<h1>PWEB class assignment</h1>
+
+<p>Create simple claculator app with vue.js framework</p>
+
+
+<div id="app">
+<input type="number" v-model="angka1" placeholder="Masukkan teks di sini" />
+<input type="number" v-model="angka2" placeholder="Masukkan teks di sini" />
+<br>
+<br>
+<button @click="hasil=angka1+angka2">+</button>
+<button @click="hasil=angka1-angka2">-</button>
+<button @click="hasil=angka1*angka2">*</button>
+<button @click="hasil=angka1/angka2">/</button>
+<br>
+<br>
+Result : {{ hasil }}
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+     angka1: 0,
+     angka2: 0,
+     hasil: 0,
+    }
+   }
+  })
+  
+  app.mount('#app')
+
+</script>
+
+</body>
+</html>
